@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="add37e9e-d0de-4dff-b92b-42e81ec609dd"
+mode="Desktop">
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="CloseBrowser"
+	namespace="AnotherTest">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+		<closeapprecorditem
+		enabled="True"
+		graceperiod="0ms"
+		method="CloseWindow"
+		optional="False"
+		searchpropertyid="31a6d7c9-d32e-4309-a5b6-12786d27c7fb">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="5b289a17-f8e1-4562-8a31-77720c082f1a"
+			sourcename="RepositoryEditor">
+				<path>
+					/form[@processname='firefox']
+				</path>
+			</info>
+		</closeapprecorditem>
+	</recorditems>
+	<repository
+	id="3d7d5ba2-d72a-4a81-bc11-f86476b3ec12"
+	name="AnotherTestRepository"
+	relativepath="AnotherTestRepository.rxrep">
+		<codegen
+		classname="AnotherTestRepository"
+		namespace="AnotherTest">
+		</codegen>
+		<rootfolder
+		id="b579d100-46b0-46ca-ac5f-81a37cdfa544"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		CloseBrowser.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>
