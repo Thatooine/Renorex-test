@@ -79,6 +79,46 @@ namespace AnotherTest
 
             Init();
 
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'DMEMesh.DivTagSign' at 43;4.", repo.DMEMesh.DivTagSignInfo, new RecordItemIndex(0));
+            repo.DMEMesh.DivTagSign.Click("43;4");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest' at 111;154.", repo.ApplicationUnderTest.SelfInfo, new RecordItemIndex(1));
+            repo.ApplicationUnderTest.Self.Click("111;154");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest.Accounts' at 45;5.", repo.ApplicationUnderTest.AccountsInfo, new RecordItemIndex(2));
+            repo.ApplicationUnderTest.Accounts.Click("45;5");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest.Administration' at 49;2.", repo.ApplicationUnderTest.AdministrationInfo, new RecordItemIndex(3));
+            repo.ApplicationUnderTest.Administration.Click("49;2");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest.CurrenciesSidebarLink' at 119;5.", repo.ApplicationUnderTest.CurrenciesSidebarLinkInfo, new RecordItemIndex(4));
+            repo.ApplicationUnderTest.CurrenciesSidebarLink.Click("119;5");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest.AssetTokens' at 46;4.", repo.ApplicationUnderTest.AssetTokensInfo, new RecordItemIndex(5));
+            repo.ApplicationUnderTest.AssetTokens.Click("46;4");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest.System' at 48;6.", repo.ApplicationUnderTest.SystemInfo, new RecordItemIndex(6));
+            repo.ApplicationUnderTest.System.Click("48;6");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest.Operations' at 49;1.", repo.ApplicationUnderTest.OperationsInfo, new RecordItemIndex(7));
+            repo.ApplicationUnderTest.Operations.Click("49;1");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest.HttpsStorageGoogleapisComMeshDev' at 31;21.", repo.ApplicationUnderTest.HttpsStorageGoogleapisComMeshDevInfo, new RecordItemIndex(8));
+            repo.ApplicationUnderTest.HttpsStorageGoogleapisComMeshDev.Click("31;21");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest.AppBarLogout' at 52;11.", repo.ApplicationUnderTest.AppBarLogoutInfo, new RecordItemIndex(9));
+            repo.ApplicationUnderTest.AppBarLogout.Click("52;11");
+            Delay.Milliseconds(0);
+            
         }
 
 #region Image Feature Data

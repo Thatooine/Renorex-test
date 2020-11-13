@@ -28,6 +28,7 @@ namespace AnotherTest
     {
         static AnotherTestRepository instance = new AnotherTestRepository();
         AnotherTestRepositoryFolders.ApplicationUnderTestAppFolder _applicationundertest;
+        AnotherTestRepositoryFolders.DMEMeshAppFolder _dmemesh;
 
         /// <summary>
         /// Gets the singleton class instance representing the AnotherTestRepository element repository.
@@ -45,6 +46,7 @@ namespace AnotherTest
             : base("AnotherTestRepository", "/", null, 0, false, "b579d100-46b0-46ca-ac5f-81a37cdfa544", ".\\RepositoryImages\\AnotherTestRepositoryb579d100.rximgres")
         {
             _applicationundertest = new AnotherTestRepositoryFolders.ApplicationUnderTestAppFolder(this);
+            _dmemesh = new AnotherTestRepositoryFolders.DMEMeshAppFolder(this);
         }
 
 #region Variables
@@ -71,6 +73,15 @@ namespace AnotherTest
         {
             get { return _applicationundertest; }
         }
+
+        /// <summary>
+        /// The DMEMesh folder.
+        /// </summary>
+        [RepositoryFolder("0a6ec82f-5288-44ef-b8d1-55682690c4fc")]
+        public virtual AnotherTestRepositoryFolders.DMEMeshAppFolder DMEMesh
+        {
+            get { return _dmemesh; }
+        }
     }
 
     /// <summary>
@@ -85,6 +96,14 @@ namespace AnotherTest
         [RepositoryFolder("5b289a17-f8e1-4562-8a31-77720c082f1a")]
         public partial class ApplicationUnderTestAppFolder : RepoGenBaseFolder
         {
+            RepoItemInfo _accountsInfo;
+            RepoItemInfo _administrationInfo;
+            RepoItemInfo _currenciessidebarlinkInfo;
+            RepoItemInfo _assettokensInfo;
+            RepoItemInfo _systemInfo;
+            RepoItemInfo _operationsInfo;
+            RepoItemInfo _httpsstoragegoogleapiscommeshdevInfo;
+            RepoItemInfo _appbarlogoutInfo;
 
             /// <summary>
             /// Creates a new ApplicationUnderTest  folder.
@@ -92,6 +111,14 @@ namespace AnotherTest
             public ApplicationUnderTestAppFolder(RepoGenBaseFolder parentFolder) :
                     base("ApplicationUnderTest", "/dom[@domain='dev.mesh.trade']", parentFolder, 30000, null, false, "5b289a17-f8e1-4562-8a31-77720c082f1a", "")
             {
+                _accountsInfo = new RepoItemInfo(this, "Accounts", ".//div[#'accounts-sidebar-link']/?/?/span[@innertext='Accounts']", 30000, null, "00f1b59d-065e-4114-87af-28a8ee348d02");
+                _administrationInfo = new RepoItemInfo(this, "Administration", ".//div[#'administration-sidebar-link']/?/?/span[@innertext='Administration']", 30000, null, "31b1ed78-6a08-43df-9f77-51af75343ed9");
+                _currenciessidebarlinkInfo = new RepoItemInfo(this, "CurrenciesSidebarLink", ".//div[#'currencies-sidebar-link']", 30000, null, "d7e7cfa2-8f02-483d-be28-575abe3e4b19");
+                _assettokensInfo = new RepoItemInfo(this, "AssetTokens", ".//div[#'asset-tokens-sidebar-link']/?/?/span[@innertext='Asset Tokens']", 30000, null, "9fc007b7-a16e-4be3-b80f-1b340d0be44b");
+                _systemInfo = new RepoItemInfo(this, "System", ".//div[#'system-sidebar-link']/?/?/span[@innertext='System']", 30000, null, "9d731b15-7d54-4bfd-91c4-646e8c6747ca");
+                _operationsInfo = new RepoItemInfo(this, "Operations", ".//div[#'operations-sidebar-link']/?/?/span[@innertext='Operations']", 30000, null, "157a14cb-dbb0-4c8a-8811-7e83fdf9306b");
+                _httpsstoragegoogleapiscommeshdevInfo = new RepoItemInfo(this, "HttpsStorageGoogleapisComMeshDev", ".//button[#'appBar-avatar']//img[@alt='']", 30000, null, "c66a780b-521d-41b3-b8e9-4c5117ab95a8");
+                _appbarlogoutInfo = new RepoItemInfo(this, "AppBarLogout", ".//li[#'appBar-logout']", 30000, null, "42d718bf-200a-4220-9918-f76b8a6b7f91");
             }
 
             /// <summary>
@@ -115,6 +142,290 @@ namespace AnotherTest
                 get
                 {
                     return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Accounts item.
+            /// </summary>
+            [RepositoryItem("00f1b59d-065e-4114-87af-28a8ee348d02")]
+            public virtual Ranorex.SpanTag Accounts
+            {
+                get
+                {
+                    return _accountsInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Accounts item info.
+            /// </summary>
+            [RepositoryItemInfo("00f1b59d-065e-4114-87af-28a8ee348d02")]
+            public virtual RepoItemInfo AccountsInfo
+            {
+                get
+                {
+                    return _accountsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Administration item.
+            /// </summary>
+            [RepositoryItem("31b1ed78-6a08-43df-9f77-51af75343ed9")]
+            public virtual Ranorex.SpanTag Administration
+            {
+                get
+                {
+                    return _administrationInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Administration item info.
+            /// </summary>
+            [RepositoryItemInfo("31b1ed78-6a08-43df-9f77-51af75343ed9")]
+            public virtual RepoItemInfo AdministrationInfo
+            {
+                get
+                {
+                    return _administrationInfo;
+                }
+            }
+
+            /// <summary>
+            /// The CurrenciesSidebarLink item.
+            /// </summary>
+            [RepositoryItem("d7e7cfa2-8f02-483d-be28-575abe3e4b19")]
+            public virtual Ranorex.DivTag CurrenciesSidebarLink
+            {
+                get
+                {
+                    return _currenciessidebarlinkInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The CurrenciesSidebarLink item info.
+            /// </summary>
+            [RepositoryItemInfo("d7e7cfa2-8f02-483d-be28-575abe3e4b19")]
+            public virtual RepoItemInfo CurrenciesSidebarLinkInfo
+            {
+                get
+                {
+                    return _currenciessidebarlinkInfo;
+                }
+            }
+
+            /// <summary>
+            /// The AssetTokens item.
+            /// </summary>
+            [RepositoryItem("9fc007b7-a16e-4be3-b80f-1b340d0be44b")]
+            public virtual Ranorex.SpanTag AssetTokens
+            {
+                get
+                {
+                    return _assettokensInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The AssetTokens item info.
+            /// </summary>
+            [RepositoryItemInfo("9fc007b7-a16e-4be3-b80f-1b340d0be44b")]
+            public virtual RepoItemInfo AssetTokensInfo
+            {
+                get
+                {
+                    return _assettokensInfo;
+                }
+            }
+
+            /// <summary>
+            /// The System item.
+            /// </summary>
+            [RepositoryItem("9d731b15-7d54-4bfd-91c4-646e8c6747ca")]
+            public virtual Ranorex.SpanTag System
+            {
+                get
+                {
+                    return _systemInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The System item info.
+            /// </summary>
+            [RepositoryItemInfo("9d731b15-7d54-4bfd-91c4-646e8c6747ca")]
+            public virtual RepoItemInfo SystemInfo
+            {
+                get
+                {
+                    return _systemInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Operations item.
+            /// </summary>
+            [RepositoryItem("157a14cb-dbb0-4c8a-8811-7e83fdf9306b")]
+            public virtual Ranorex.SpanTag Operations
+            {
+                get
+                {
+                    return _operationsInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Operations item info.
+            /// </summary>
+            [RepositoryItemInfo("157a14cb-dbb0-4c8a-8811-7e83fdf9306b")]
+            public virtual RepoItemInfo OperationsInfo
+            {
+                get
+                {
+                    return _operationsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The HttpsStorageGoogleapisComMeshDev item.
+            /// </summary>
+            [RepositoryItem("c66a780b-521d-41b3-b8e9-4c5117ab95a8")]
+            public virtual Ranorex.ImgTag HttpsStorageGoogleapisComMeshDev
+            {
+                get
+                {
+                    return _httpsstoragegoogleapiscommeshdevInfo.CreateAdapter<Ranorex.ImgTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The HttpsStorageGoogleapisComMeshDev item info.
+            /// </summary>
+            [RepositoryItemInfo("c66a780b-521d-41b3-b8e9-4c5117ab95a8")]
+            public virtual RepoItemInfo HttpsStorageGoogleapisComMeshDevInfo
+            {
+                get
+                {
+                    return _httpsstoragegoogleapiscommeshdevInfo;
+                }
+            }
+
+            /// <summary>
+            /// The AppBarLogout item.
+            /// </summary>
+            [RepositoryItem("42d718bf-200a-4220-9918-f76b8a6b7f91")]
+            public virtual Ranorex.LiTag AppBarLogout
+            {
+                get
+                {
+                    return _appbarlogoutInfo.CreateAdapter<Ranorex.LiTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The AppBarLogout item info.
+            /// </summary>
+            [RepositoryItemInfo("42d718bf-200a-4220-9918-f76b8a6b7f91")]
+            public virtual RepoItemInfo AppBarLogoutInfo
+            {
+                get
+                {
+                    return _appbarlogoutInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The DMEMeshAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("0a6ec82f-5288-44ef-b8d1-55682690c4fc")]
+        public partial class DMEMeshAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _btngoogleInfo;
+            RepoItemInfo _divtagsignInfo;
+
+            /// <summary>
+            /// Creates a new DMEMesh  folder.
+            /// </summary>
+            public DMEMeshAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("DMEMesh", "/dom[@domain='andile.eu.auth0.com']", parentFolder, 30000, null, false, "0a6ec82f-5288-44ef-b8d1-55682690c4fc", "")
+            {
+                _btngoogleInfo = new RepoItemInfo(this, "BtnGoogle", ".//div[#'btn-google']", 30000, null, "47909358-8539-4e65-b8c8-2b9801ad8be4");
+                _divtagsignInfo = new RepoItemInfo(this, "DivTagSign", ".//div[#'btn-google']/div[2]", 30000, null, "9aa6a8c9-6109-4d92-b826-8ee8b012c7a5");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("0a6ec82f-5288-44ef-b8d1-55682690c4fc")]
+            public virtual Ranorex.WebDocument Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.WebDocument>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("0a6ec82f-5288-44ef-b8d1-55682690c4fc")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnGoogle item.
+            /// </summary>
+            [RepositoryItem("47909358-8539-4e65-b8c8-2b9801ad8be4")]
+            public virtual Ranorex.DivTag BtnGoogle
+            {
+                get
+                {
+                    return _btngoogleInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnGoogle item info.
+            /// </summary>
+            [RepositoryItemInfo("47909358-8539-4e65-b8c8-2b9801ad8be4")]
+            public virtual RepoItemInfo BtnGoogleInfo
+            {
+                get
+                {
+                    return _btngoogleInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DivTagSign item.
+            /// </summary>
+            [RepositoryItem("9aa6a8c9-6109-4d92-b826-8ee8b012c7a5")]
+            public virtual Ranorex.DivTag DivTagSign
+            {
+                get
+                {
+                    return _divtagsignInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The DivTagSign item info.
+            /// </summary>
+            [RepositoryItemInfo("9aa6a8c9-6109-4d92-b826-8ee8b012c7a5")]
+            public virtual RepoItemInfo DivTagSignInfo
+            {
+                get
+                {
+                    return _divtagsignInfo;
                 }
             }
         }

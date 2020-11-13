@@ -1,30 +1,111 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<repository
-name="AnotherTestRepository"
-id="3d7d5ba2-d72a-4a81-bc11-f86476b3ec12">
-  <codegen
-  classname="AnotherTestRepository"
-  namespace="AnotherTest"/>
-  <rootfolder
-  name="Root"
-  id="b579d100-46b0-46ca-ac5f-81a37cdfa544"
-  searchtimeout="30000ms"
-  capname="unknown"
-  isrooted="True"
-  usecache="True">
-      <appfolder
-          addcaps="container,webdocument"
-          capname="webdocument"
-          id="5b289a17-f8e1-4562-8a31-77720c082f1a"
-          isrooted="True"
-          name="ApplicationUnderTest"
-          searchtimeout="30000ms"
-          usecache="False">
-          <basepath>
-              /dom[@domain='dev.mesh.trade']
-          </basepath>
-          <icon>
-iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+﻿<repository
+id="3d7d5ba2-d72a-4a81-bc11-f86476b3ec12"
+name="AnotherTestRepository">
+	<codegen
+	classname="AnotherTestRepository"
+	namespace="AnotherTest">
+	</codegen>
+	<rootfolder
+	capname="unknown"
+	id="b579d100-46b0-46ca-ac5f-81a37cdfa544"
+	isrooted="True"
+	name="Root"
+	searchtimeout="0ms"
+	usecache="True">
+		<appfolder
+		addcaps="container,webdocument"
+		capname="webdocument"
+		id="5b289a17-f8e1-4562-8a31-77720c082f1a"
+		isrooted="True"
+		name="ApplicationUnderTest"
+		refimgid="090d1f94-ba9f-4b63-b200-c60654b57cc6"
+		searchtimeout="30000ms"
+		usecache="False">
+			<item
+			addcaps="unknown,webelement,spantag"
+			capname="spantag"
+			id="00f1b59d-065e-4114-87af-28a8ee348d02"
+			name="Accounts"
+			refimgid="5ee99d84-d149-45fd-8f46-5c7ff2e95bbf"
+			refpath="/dom[@domain='dev.mesh.trade']//div[#'accounts-sidebar-link']/div[2]/span[@innertext='Accounts']"
+			searchtimeout="30000ms">
+				/dom[@domain='dev.mesh.trade']//div[#'accounts-sidebar-link']/?/?/span[@innertext='Accounts']
+			</item>
+			<item
+			addcaps="unknown,webelement,spantag"
+			capname="spantag"
+			id="31b1ed78-6a08-43df-9f77-51af75343ed9"
+			name="Administration"
+			refimgid="0abfb19a-f0ed-42c5-9d47-4fc5775c7fff"
+			refpath="/dom[@domain='dev.mesh.trade']//div[#'administration-sidebar-link']/div[2]/span[@innertext='Administration']"
+			searchtimeout="30000ms">
+				/dom[@domain='dev.mesh.trade']//div[#'administration-sidebar-link']/?/?/span[@innertext='Administration']
+			</item>
+			<item
+			addcaps="unknown,webelement,divtag"
+			capname="divtag"
+			id="d7e7cfa2-8f02-483d-be28-575abe3e4b19"
+			name="CurrenciesSidebarLink"
+			refimgid="aeeb2cac-a7fa-4c20-a4cd-a4a9f75ecf32"
+			refpath="/dom[@domain='dev.mesh.trade']//div[#'currencies-sidebar-link']"
+			searchtimeout="30000ms">
+				/dom[@domain='dev.mesh.trade']//div[#'currencies-sidebar-link']
+			</item>
+			<item
+			addcaps="unknown,webelement,spantag"
+			capname="spantag"
+			id="9fc007b7-a16e-4be3-b80f-1b340d0be44b"
+			name="AssetTokens"
+			refimgid="78e4cc66-5d20-4523-a242-415dc6a037fd"
+			refpath="/dom[@domain='dev.mesh.trade']//div[#'asset-tokens-sidebar-link']/div[2]/span[@innertext='Asset Tokens']"
+			searchtimeout="30000ms">
+				/dom[@domain='dev.mesh.trade']//div[#'asset-tokens-sidebar-link']/?/?/span[@innertext='Asset Tokens']
+			</item>
+			<item
+			addcaps="unknown,webelement,spantag"
+			capname="spantag"
+			id="9d731b15-7d54-4bfd-91c4-646e8c6747ca"
+			name="System"
+			refimgid="bfa0831d-628a-4afb-ac34-5e9355cf1fb0"
+			refpath="/dom[@domain='dev.mesh.trade']//div[#'system-sidebar-link']/div[2]/span[@innertext='System']"
+			searchtimeout="30000ms">
+				/dom[@domain='dev.mesh.trade']//div[#'system-sidebar-link']/?/?/span[@innertext='System']
+			</item>
+			<item
+			addcaps="unknown,webelement,spantag"
+			capname="spantag"
+			id="157a14cb-dbb0-4c8a-8811-7e83fdf9306b"
+			name="Operations"
+			refimgid="724e55cf-0050-4551-9cac-57954e0ad0c9"
+			refpath="/dom[@domain='dev.mesh.trade']//div[#'operations-sidebar-link']/div[2]/span[@innertext='Operations']"
+			searchtimeout="30000ms">
+				/dom[@domain='dev.mesh.trade']//div[#'operations-sidebar-link']/?/?/span[@innertext='Operations']
+			</item>
+			<item
+			addcaps="unknown,webelement,imgtag"
+			capname="imgtag"
+			id="c66a780b-521d-41b3-b8e9-4c5117ab95a8"
+			name="HttpsStorageGoogleapisComMeshDev"
+			refimgid="e2068298-2bff-4739-83eb-e79e3f315b61"
+			refpath="/dom[@domain='dev.mesh.trade']//button[#'appBar-avatar']/span[1]/div/img[@alt='']"
+			searchtimeout="30000ms">
+				/dom[@domain='dev.mesh.trade']//button[#'appBar-avatar']//img[@alt='']
+			</item>
+			<item
+			addcaps="unknown,webelement,litag"
+			capname="litag"
+			id="42d718bf-200a-4220-9918-f76b8a6b7f91"
+			name="AppBarLogout"
+			refimgid="89b21480-44f2-4725-82c8-c37d2e455c62"
+			refpath="/dom[@domain='dev.mesh.trade']//li[#'appBar-logout']"
+			searchtimeout="30000ms">
+				/dom[@domain='dev.mesh.trade']//li[#'appBar-logout']
+			</item>
+			<basepath>
+				/dom[@domain='dev.mesh.trade']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGHRFWHRTb2Z0d2FyZQBQYWlu
 dC5ORVQgdjMuMzE3g3eGAAACKklEQVQ4T43R20vTcRjHcS/6G4Kgyy6KKKjwJogIDBJjIBUt2YVD
 yoGVmWUWzozMC92YaWqeSE1s0dThOtjBWUlKkMxDudXU1lCU6XSepzu82+/nvNrX6APP1e95Xt/f
@@ -37,9 +118,59 @@ lc7EIcse4vXJJF18xX7FVUpq6njd5xUDKVeKcE2v4xib52bxIAdza9mbf4CE9OscUZo5q3nO295p
 zD0zYuBcegHOCb+8KpvDi6G5hRMX8klIKaei6b083PdjCdNHjxhQqO/gcPsj77CB27PO2OQa9j+r
 8tq+/VyODC/yaXBxeyBRlUPv8Dzt3eO86PrNs85Rml7+ot7soLrVTqVpsypMTjGQcD5L/vC/tTkV
 F/cXNG0rDkAnVtkAAAAASUVORK5CYII=
-          </icon>
-      </appfolder>
-      <basepath/>
-  </rootfolder>
-  <variables/>
+			</icon>
+		</appfolder>
+		<appfolder
+		addcaps="container,webdocument"
+		capname="webdocument"
+		id="0a6ec82f-5288-44ef-b8d1-55682690c4fc"
+		isrooted="True"
+		name="DMEMesh"
+		refpath="/dom[@domain='andile.eu.auth0.com']"
+		searchtimeout="30000ms"
+		usecache="False">
+			<item
+			addcaps="unknown,webelement,divtag"
+			capname="divtag"
+			id="47909358-8539-4e65-b8c8-2b9801ad8be4"
+			name="BtnGoogle"
+			refimgid="c8799690-1cb6-4e36-9622-9076f027af6b"
+			refpath="/dom[@domain='andile.eu.auth0.com']//div[#'btn-google']"
+			searchtimeout="30000ms">
+				/dom[@domain='andile.eu.auth0.com']//div[#'btn-google']
+			</item>
+			<item
+			addcaps="unknown,webelement,divtag"
+			capname="divtag"
+			id="9aa6a8c9-6109-4d92-b826-8ee8b012c7a5"
+			name="DivTagSign"
+			refimgid="ca6ee05b-0891-43da-9827-9ed4e0b4ba95"
+			refpath="/dom[@domain='andile.eu.auth0.com']//div[#'btn-google']/div[2]"
+			searchtimeout="30000ms">
+				/dom[@domain='andile.eu.auth0.com']//div[#'btn-google']/div[2]
+			</item>
+			<basepath>
+				/dom[@domain='andile.eu.auth0.com']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGHRFWHRTb2Z0d2FyZQBQYWlu
+dC5ORVQgdjMuMzE3g3eGAAACKklEQVQ4T43R20vTcRjHcS/6G4Kgyy6KKKjwJogIDBJjIBUt2YVD
+yoGVmWUWzozMC92YaWqeSE1s0dThOtjBWUlKkMxDudXU1lCU6XSepzu82+/nvNrX6APP1e95Xt/f
+9/vEbaWh7TO1xi4qmjspfWKhuLqN++VGtLqn5BTVk1lQRbRVHGn4X8nTNclYtD020smBYDjaHhsJ
+cIxPbY8YIr+9viEGgqGwDBxLvixXfGJaLCLdedUfCwRDyPDKWoiF5SAuT0AMSA+2BXhXZqmydFBu
+bkfbmkFpayPOyQW8CwHs7jUxIN1NOkEa1llLGA7bsYX7KbTd4GiuiUuVbxhyzTMwuiwGpFX5lkLU
+dFjJ+55Mw5yGGpsRtX6Kk2Ue9jWewtBRx9eRJTEg7XnWF+TBo25SzUmo3inINLjIKoPD1QXsbNvN
+6fxr9Az5xIDm9kOm5gLce+xEW/aF1BYlCmshSr2PMxm32HV3B8ez0/jQPycG1NklTMxsUGUaQaMD
+lc7EIcse4vXJJF18xX7FVUpq6njd5xUDKVeKcE2v4xib52bxIAdza9mbf4CE9OscUZo5q3nO295p
+zD0zYuBcegHOCb+8KpvDi6G5hRMX8klIKaei6b083PdjCdNHjxhQqO/gcPsj77CB27PO2OQa9j+r
+8tq+/VyODC/yaXBxeyBRlUPv8Dzt3eO86PrNs85Rml7+ot7soLrVTqVpsypMTjGQcD5L/vC/tTkV
+F/cXNG0rDkAnVtkAAAAASUVORK5CYII=
+			</icon>
+		</appfolder>
+		<basepath>
+		</basepath>
+	</rootfolder>
+	<variables>
+	</variables>
 </repository>

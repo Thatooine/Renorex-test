@@ -79,8 +79,8 @@ namespace AnotherTest
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Website", "Opening web site 'https://dev.mesh.trade' with browser 'firefox' in normal mode.", new RecordItemIndex(0));
-            Host.Current.OpenBrowser("https://dev.mesh.trade", "firefox", "", false, false, false, false, false, true);
+            Report.Log(ReportLevel.Info, "Website", "Opening web site 'https://dev.mesh.trade' with browser 'Chrome' in normal mode.", new RecordItemIndex(0));
+            Host.Current.OpenBrowser("https://dev.mesh.trade", "Chrome", "", false, false, false, false, false, true);
             Delay.Milliseconds(0);
             
         }
